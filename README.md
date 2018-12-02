@@ -15,13 +15,38 @@ Options:
 	-h,			Display usage information
   
 Notes:
-DEVICE can be either the number, id, or name of the usb device. Run vmswitch with -l to see these values.
-The -a -d and -t options cannot be run at the same time, likewise with -A -D and -T.
-The program will need elevated privlages to run (WIP, may not be handled correctly).
+DEVICE can be either the number, id, or name of the usb device. Run vmswitch with -l to see these values
+The -a -d and -t options cannot be run at the same time, likewise with -A -D and -T
+The program will need elevated privlages to run (WIP, may not be handled correctly)
+
+Examples:
+
+	$ vmswitch -l
+	Number	ID	Name
+	1	1b09	Corsair K70R Keyboard
+	2	0037	Razer DeathAdder
+	3	0001	Cambridge Silicon Bluetooth Dongle
+	
+	$ vmswitch -a 1 win10
+	Attaching:
+	1	1b09	Corsair K70R Keyboard
+	
+	$ vmswitch -A Razer win10
+	Adding to domain config:
+	2	0037	Razer DeathAdder
+	
+	$ vmswitch -d 0037 win10
+	Detaching:
+	2	0037	Razer Death
+	
 ```
 # Dependencies
 * lsusb [part of gnu coreutils]
 * libvirt
+
+# Bugs
+* Currently does not support searching by names using multiple words. E.g: '$ vmswitch -a Razer DeathAdder', instead search for just 'Razer', or use the ID and Number values.
+* Unable to parse more than 2 arguments at the same time, except with -l.
 
 [Untested on non qemu / kvm virtual machines]
 
