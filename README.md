@@ -1,5 +1,5 @@
 # Usbswitch
-A tool for attaching and detaching usb devices to / from, qemu / kvm virtual machines, written in bash.
+A tool for attaching and detaching usb devices to / from, libvirt managed virtual machines, written in bash.
 
 # Usage 
 ```
@@ -49,5 +49,6 @@ Examples:
 * Due to the way it uses usb id's, it cannot attach devices where there is multiple of the same device plugged in.
 * Unable to parse more than 2 arguments at the same time, except with -l.
 
-[Untested on non qemu / kvm virtual machines]
+# Notes
+* Untested on non qemu / kvm virtual machines
 
