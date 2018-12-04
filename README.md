@@ -41,7 +41,7 @@ Examples:
 	
 ```
 # Dependencies
-* lsusb [part of gnu coreutils]
+* lsusb
 * libvirt
 
 # Bugs
