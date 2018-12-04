@@ -37,7 +37,7 @@ Examples:
 	
 	$ usbswitch -d 0037 win10
 	Detaching:
-	2	0037	Razer Death
+	2	0037	Razer DeathAdder
 	
 ```
 # Dependencies
