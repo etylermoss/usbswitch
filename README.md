@@ -1,5 +1,5 @@
 # Usbswitch
-A tool for attaching and detaching usb devices to / from, libvirt managed virtual machines, written in bash.
+A tool for attaching and detaching usb devices to / from, libvirt managed virtual machines, written in bash. Possibly buggy and won't work on some setups, mainly written for my own use as my second proper Bash utility.
 
 # Usage 
 ```
