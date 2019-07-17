@@ -1,5 +1,5 @@
 # Usbswitch
-A tool for attaching and detaching usb devices to / from, libvirt managed virtual machines, written in bash. Possibly buggy and won't work on some setups, mainly written for my own use as my second proper Bash utility.
+A tool for attaching and detaching usb devices to / from, libvirt managed virtual machines, written in bash. Possibly buggy and won't work on some setups, mainly written for my own use.
 
 # Usage 
 ```
@@ -47,7 +47,7 @@ Examples:
 # Bugs
 * Currently does not support searching by names using multiple words. E.g: '$ usbswitch -a Razer DeathAdder', instead search for just 'Razer', or use the ID and Number values.
 * Due to the way it uses usb id's, it cannot attach devices where there is multiple of the same device plugged in.
-* Unable to parse more than 2 arguments at the same time, except with -l.
+* Unable to parse more than 2 arguments at the same time.
 
 # Notes
 * Untested on non qemu / kvm virtual machines
